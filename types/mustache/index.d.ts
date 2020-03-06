@@ -377,8 +377,8 @@ type OpeningAndClosingTags = [string, string];
  *
  * A function that is used to load partial template on the fly that takes a single argument: the name of the partial.
  */
-type PartialsOrLookupFn = Record<string, string> | PartialLookupFn
-type PartialLookupFn = (partialName: string) => string | undefined
+type PartialsOrLookupFn = Record<string, string | number> | PartialLookupFn
+type PartialLookupFn = (partialName: string) => string | number | undefined
 
 interface TemplateCache {
     set(cacheKey: string, value: string): void
